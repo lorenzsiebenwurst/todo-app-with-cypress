@@ -28,3 +28,5 @@ jobs:
       - run: npm ci
       # Run jest
       - run: npm run test
+      # Run cypress
+      - run: npm run e2e
