@@ -7,6 +7,7 @@ export function isDuplicate(todo, todos) {
   for (let i = 0; i < todos.length; i++) {
     const currentTodo = todos[i];
     if (currentTodo.todo.toLowerCase() === todo) {
+      console.log("True");
       return true;
     }
   }

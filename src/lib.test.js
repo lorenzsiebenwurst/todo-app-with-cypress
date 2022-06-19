@@ -4,9 +4,9 @@ import { isDuplicate } from "./lib";
 
 describe("checkDublicate", function () {
   it("should check dublicate", function () {
-    let todos = { todo: "Test", done: false };
+    const todos = [{ todo: "Test", done: false }];
     let todo = "Test";
 
-    expect(isDuplicate(todo, todos)).toEqual(false);
+    expect(isDuplicate(todo, todos)).toEqual(true);
   });
 });
