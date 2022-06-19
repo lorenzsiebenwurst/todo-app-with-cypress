@@ -2,9 +2,8 @@ export function newTodoLengthCheck(newTodo) {
   return newTodo.length === 0;
 }
 
-export function isDuplicate(todo) {
+export function isDuplicate(todo, todos) {
   todo = todo.toLowerCase();
-
   for (let i = 0; i < todos.length; i++) {
     const currentTodo = todos[i];
     if (currentTodo.todo.toLowerCase() === todo) {
@@ -14,7 +13,7 @@ export function isDuplicate(todo) {
   return false;
 }
 
-export function filterTodosWithState(todoListEL, filterValue) {
+export function filterTodosWithState(todoListEl, filterValue) {
   for (let i = 0; i < todoListEl.children.length; i++) {
     const currentTodo = todoListEl.children[i];
     if (filterValue === "all") {
@@ -54,7 +53,7 @@ export function initApp() {
     }
 
     // duplicate check
-    if (isDuplicate(newTodoText)) {
+    if (isDuplicate(newTodoText, todos)) {
       return;
     }
 
@@ -102,8 +101,6 @@ export function initApp() {
 
     filterTodos();
   }
-
-  isDuplicate(todo);
 
   todoListEl.addEventListener("change", toggleTodoState);
   function toggleTodoState(event) {

@@ -4,12 +4,16 @@
   "description": "Minimal todo app example.",
   "scripts": {
     "serve": "serve ./src",
-    "e2e": "cypress open"
+    "e2e": "cypress open",
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.18.2",
+    "@types/jest": "^28.1.2",
+    "jest": "^28.1.1",
     "serve": "^13.0.2"
   },
   "dependencies": {
